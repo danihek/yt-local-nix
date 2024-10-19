@@ -9,7 +9,7 @@ let
   repo = pkgs.fetchgit {
     url = "https://git.sr.ht/~heckyel/yt-local";
     rev = "refs/heads/master";
-    outputHash = "sha256-0finwKrnnVY+rGxBjvcG3vKtul5YqH1oIrXze/4GMNQ=";
+    sha256 = "sha256-0finwKrnnVY+rGxBjvcG3vKtul5YqH1oIrXze/4GMNQ=";
   };
 
   #requirements = builtins.readFile "${repo}/requirements.txt";
