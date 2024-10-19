@@ -39,7 +39,7 @@ let
 in
   pkgs.stdenv.mkDerivation rec {
     pname = "yt-local";
-    version = "0.0.1";
+    version = "0.0.2";
 
     src = repo;
 
@@ -51,9 +51,10 @@ in
     ];
   
     installPhase = ''
-      cp -r ${repo} $out
+      mkdir -p $out/etc/yt-local-nix/
+      cp -r ${repo}/* $out/etc/yt-local-nix/
     '';
-  
+
     meta = with pkgs.lib; {
       description = "yt-local for nix";
       license = licenses.mit;
